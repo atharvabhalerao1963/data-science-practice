@@ -1,0 +1,49 @@
+-- 1. Find Employees with High Salary
+
+-- Table: Employees
+
+-- EmpID	Name	Department	Salary
+-- 1	Alice	IT	60000
+-- 2	Bob	HR	45000
+-- 3	Charlie	IT	75000
+-- 4	David	Sales	50000
+
+-- Question:
+-- Write an SQL query to:
+
+-- Display employees whose salary is greater than 50,000.
+-- Show only the Name and Salary columns.
+
+select e.Name, e.salary from Employees e where e.salary>50000 
+
+-- 
+
+-- 2. Count Employees in Each Department
+
+-- Table: Employees
+
+-- Question:
+-- Write an SQL query to display:
+
+-- Each department.
+-- Number of employees in each department.
+
+-- Expected output:
+
+-- Department	Employee_Count
+-- IT	2
+-- HR	1
+-- Sales	1 
+select Department , Count(*) as Employee_Count from Employees group by Department 
+
+
+-- 3. Find the Second Highest Salary
+
+-- Table: Employees
+
+-- Question:
+-- Write an SQL query to find the second highest salary from the Employees table.
+
+SELECT DISTINCT Salary from Employees order by Salary DESC limit 1 OFFSET 1 ;
+-- or  
+select MAX(Salary) from Employees where Salary<(select MAX(Salary) from Employees);
