@@ -71,3 +71,11 @@ select E.Salary , E.Name  from Employees E where Department = 'IT';
 
 SELECT MAX(Salary) AS Highest_Salary
 FROM Employees;
+
+
+-- 6. Display Employees Sorted by Salary
+
+-- Question:
+-- Write an SQL query to display all employees sorted by salary in descending order.
+select * from Employees E order by E.salary DESC 
+
