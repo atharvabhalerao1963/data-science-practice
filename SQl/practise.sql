@@ -64,3 +64,10 @@ select MAX(Salary) from Employees where Salary<(select MAX(Salary) from Employee
 
 select E.Salary , E.Name  from Employees E where Department = 'IT';
 
+-- 5. Find the Highest Salary
+
+-- Question:
+-- Write an SQL query to find the highest salary in the Employees table.
+
+SELECT MAX(Salary) AS Highest_Salary
+FROM Employees;
