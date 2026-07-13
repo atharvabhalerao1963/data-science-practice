@@ -47,3 +47,20 @@ select Department , Count(*) as Employee_Count from Employees group by Departmen
 SELECT DISTINCT Salary from Employees order by Salary DESC limit 1 OFFSET 1 ;
 -- or  
 select MAX(Salary) from Employees where Salary<(select MAX(Salary) from Employees);
+
+
+-- 4. Find Employees from the IT Department
+
+-- Table: Employees
+
+-- EmpID	Name	Department	Salary
+-- 1	Alice	IT	60000
+-- 2	Bob	HR	45000
+-- 3	Charlie	IT	75000
+-- 4	David	Sales	50000
+
+-- Question:
+-- Write an SQL query to display the Name and Salary of employees who work in the IT department.
+
+select E.Salary , E.Name  from Employees E where Department = 'IT';
+
