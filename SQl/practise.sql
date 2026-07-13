@@ -79,3 +79,7 @@ FROM Employees;
 -- Write an SQL query to display all employees sorted by salary in descending order.
 select * from Employees E order by E.salary DESC 
 
+-- Q7. Count Total Employees
+
+-- Write an SQL query to count the total number of employees in the Employees table.
+select Count(*) from Employees
