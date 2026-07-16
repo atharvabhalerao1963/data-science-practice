@@ -89,3 +89,19 @@ select Count(*) from Employees
 -- Question:
 -- Display the employee name and salary whose salary is between 50,000 and 70,000 (inclusive).
 select E.name , E.Salary from Employees E where salary between 50000 and 70000
+
+-- . Find Departments Having More Than One Employee
+
+-- Question:
+-- Display the departments that have more than one employee.
+
+-- Expected Output
+
+-- Department	Employee_Count
+-- IT	2
+-- 10. Find Employees Whose Name Starts with 'A'
+SELECT E.department,
+       COUNT(*) AS Employee_Count
+FROM Employee E
+GROUP BY E.department
+HAVING COUNT(*) > 1;
