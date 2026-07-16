@@ -83,3 +83,9 @@ select * from Employees E order by E.salary DESC
 
 -- Write an SQL query to count the total number of employees in the Employees table.
 select Count(*) from Employees
+
+-- 8. Find Employees with Salary Between 50,000 and 70,000
+
+-- Question:
+-- Display the employee name and salary whose salary is between 50,000 and 70,000 (inclusive).
+select E.name , E.Salary from Employees E where salary between 50000 and 70000
