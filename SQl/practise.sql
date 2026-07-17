@@ -105,3 +105,23 @@ SELECT E.department,
 FROM Employee E
 GROUP BY E.department
 HAVING COUNT(*) > 1;
+
+
+-- Question:
+-- -- Display all employee details whose name starts with the letter A.
+
+select * from Employee  E where E.name Like 'A%'
+
+-- -- 11. Find the Average Salary of Each Department
+
+-- -- Question:
+-- -- Display each department along with its average salary.
+
+-- -- Expected Output
+
+-- -- Department	Avg_Salary
+-- -- IT	67500
+-- -- HR	45000
+-- -- Sales	50000
+
+select  E.Department , AVG(E.Salary) as Avg_Salary from Employee E group by Department
