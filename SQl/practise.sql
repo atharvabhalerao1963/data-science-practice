@@ -125,3 +125,11 @@ select * from Employee  E where E.name Like 'A%'
 -- -- Sales	50000
 
 select  E.Department , AVG(E.Salary) as Avg_Salary from Employee E group by Department
+
+
+-- 12. Find Employees Earning Above the Average Salary
+
+-- Question:
+-- Display the names and salaries of employees whose salary is greater than the average salary of all employees.
+
+select E.name ,  E.Salaryfrom Employee E where Salary > (select  AVG(Salary) from Employee) 
