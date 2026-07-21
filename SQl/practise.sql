@@ -142,3 +142,9 @@ select E.name ,  E.Salaryfrom Employee E where Salary > (select  AVG(Salary) fro
 
 select DISTINCT E.salary , E.name from Employee order By salary Desc Limit 1 OFFSET 2 
 
+
+-- 14. Display Employee Names in Uppercase
+
+-- Question:
+-- Display employee names in uppercase along with their department.
+select upper(Name) as Employee_Name , Department from Employee ;
