@@ -133,3 +133,12 @@ select  E.Department , AVG(E.Salary) as Avg_Salary from Employee E group by Depa
 -- Display the names and salaries of employees whose salary is greater than the average salary of all employees.
 
 select E.name ,  E.Salaryfrom Employee E where Salary > (select  AVG(Salary) from Employee) 
+
+
+-- 13. Find the Third Highest Salary
+
+-- Question:
+-- Write an SQL query to find the third highest salary from the Employees table.
+
+select DISTINCT E.salary , E.name from Employee order By salary Desc Limit 1 OFFSET 2 
+
